@@ -1,0 +1,144 @@
+body{
+  background-color:#f4f4f4;
+  color:#555555;
+  font: normal 16px Arial, Helvetica;
+  line-height:1.6em;
+  
+}
+h2{
+    text-align:center;
+    text-transform:uppercase;
+}
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+  }
+.footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    width:960px;
+    margin:auto;
+    margin-left: 280px;
+    margin-right:280px;
+    }
+.welcome{
+    height: 100%;
+    top: 0;
+    left: 320px;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    margin:0;
+    color:#818181;
+    border: 2px #ccc solid;
+    display: block;
+    text-decoration:underline;
+
+    }
+    .sidenav {
+        list-style-type: none;
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 280px; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #f4f4f4; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;
+        border: 2px #ccc solid;
+      }
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+      }
+      .sidenav2 {
+        list-style-type: none;
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 270px; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        right: 0;
+        background-color: #f4f4f4; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;
+        border: 2px #ccc solid;
+      }
+    .sidenav2 a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+      }
+
+.ovladaci_panel_student ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.ovladaci_panel_student li {
+    float: left;
+}
+  
+.ovladaci_panel_student a {
+    display: block;
+    padding: 16px;
+    background-color: #f4f4f4;
+    text-decoration: none;
+}
+.ovladaci_panel_ucitel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.ovladaci_panel_ucitel li {
+    float: left;
+}
+  
+.ovladaci_panel_ucitel a {
+    display: block;
+    padding: 16px;
+    background-color: #dddddd;
+    text-decoration: none;
+}
+.moje_predmety{
+    float:left;
+    width:33.3%;
+    border:2px #ccc solid;
+    list-style-type: none;
+    margin:10px 0;
+    padding:5px;
+    line-height:1.6em;
+    box-sizing:border-box;
+}
+.blog{
+    float:left;
+    width:100%;
+    border:2px #ccc solid;
+    list-style-type: none;
+    margin:10px 0;
+    padding:5px;
+    line-height:1.6em;
+    box-sizing:border-box;
+}
+.seznam_predmetu{
+    list-style-type: none;
+    line-height:1.6em;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+
+

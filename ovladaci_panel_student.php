@@ -1,10 +1,11 @@
 <?php
 if(isset($_SESSION['login_user'])){
     ?>
+
 <nav class="navbar">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
-        <svg width="30" height="30">
+        <svg width="20" height="30">
             <path d="M0,12 15,12" stroke="#fff" stroke-width="3"/>
             <path d="M0,18 15,18" stroke="#fff" stroke-width="3"/>
             <path d="M0,24 15,24" stroke="#fff" stroke-width="3"/>
@@ -33,21 +34,7 @@ if(isset($_SESSION['login_user'])){
     <a href="odhlaseni.php">Odhlášení</a> 
   </div>
 
-  <div id="main">
-  </div>
-
-  <script>
-    function openSlideMenu(){
-      document.getElementById('side-menu').style.width = '200px';
-      document.getElementById('main').style.marginLeft = '200px';
-    }
-
-    function closeSlideMenu(){
-      document.getElementById('side-menu').style.width = '0';
-      document.getElementById('main').style.marginLeft = '0';
-    }
-  </script>
-</body>          
+            
             
             
             

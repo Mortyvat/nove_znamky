@@ -95,6 +95,7 @@ tr:hover {
   background: #ddd;
   margin-top: 20px;
 }
+/* Navigační panel */
 .navbar{
   background-color:#333;
   overflow:hidden;
@@ -121,32 +122,77 @@ tr:hover {
   color:#000;
 }
 
-.side-nav{
-  height:100%;
-  width:0;
-  position:fixed;
-  z-index:1;
-  top:0;
-  left:0;
-  background-color:#111;
-  opacity:0.9;
-  overflow-x:hidden;
-  padding-top:60px;
-  transition:0.5s;
-}
+/* Java hledat studenta */
+#myInput {
+  <!-- background-image: url('/css/searchicon.png'); -->
+   background-position: 10px 12px;
+   background-repeat: no-repeat;
+   width: 100%;
+   font-size: 14px;
+   padding: 12px 20 px 12px 40px;
+   border: 1px solid #ddd;
+   margin-bottom: 12px;
+ }
+ 
+ #myUL {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ #myUL li a {
+   border: 1px solid #ddd;
+   margin-top: -1px; /* Prevent double borders */
+   background-color: #f6f6f6;
+   padding: 8px;
+   text-decoration: none;
+   font-size: 14px;
+   color: black;
+   display: block
+ }
+ 
+ #myUL li a:hover:not(.header) {
+   background-color: #eee;
+ }
 
-.side-nav a{
-  padding:10px 10px 10px 30px;
-  text-decoration:none;
-  font-size:18px;
-  color:#ccc;
-  display:block;
-}
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Proměnlivé rozložení stránky podle velikosti */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .side-nav {
+      display: none !important;
+  }
+}
+@media screen and (min-width: 800px) {
+  span {
+      display: none !important;
+  }
+}
+@media screen and (max-width: 800px){
+  .side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:#111;
+    opacity:0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:0.5s;
+  }
+  
+  .side-nav a{
+    padding:10px 10px 10px 30px;
+    text-decoration:none;
+    font-size:18px;
+    color:#ccc;
+    display:block;
   }
 }
 

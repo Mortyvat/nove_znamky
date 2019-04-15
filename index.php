@@ -5,6 +5,8 @@ include "head.php";
 ?>
 
 <body>
+<div id="main">
+  
         <?php
         include "prihlasovani.php";
         include "welcome.php";
@@ -23,14 +25,29 @@ include "head.php";
         
         include "vypis_znamek_predmetu_studenta.php";
         include "Vypsat_aktualitu.php";
-        }   
+         
         echo "</div>";
         echo "<div class='rightcolumn'>";
+        include "hledat_studenta.php";
         include "rozvrh.php";
         include "moje_znamky.php";
         include "vypis_studentu_predmetu.php";
         ?> 
+        </div>
+
+<script>
+  function openSlideMenu(){
+    document.getElementById('side-menu').style.width = '200px';
+    document.getElementById('main').style.marginLeft = '200px';
+  }
+
+  function closeSlideMenu(){
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
+</script>
         </div>     
 </div>
 </body>
 </html>
+<?php }  ?>

@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $username =  $_SESSION['login_user'];
     $post = htmlspecialchars($_POST['poslat']);
     $headline = $_POST['headline']; 
-    $date = date("d. m. Y") . "<br>";
+    $date = date("Y/m/d") . "<br>";
     $connection = mysqli_connect('localhost', 'root', '', 'databaze');
     if(!$connection) {
         die("Database connection failed");

@@ -20,12 +20,13 @@ include "head.php";
         echo "<div class='row'>";
         
         echo "<div class='leftcolumn'>";
+        
         include "vypis_znamek_predmetu_studenta.php";
         include "Vypsat_aktualitu.php";
         }   
-
         echo "</div>";
         echo "<div class='rightcolumn'>";
+        include "rozvrh.php";
         include "moje_znamky.php";
         include "vypis_studentu_predmetu.php";
         ?> 

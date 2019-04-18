@@ -1,9 +1,8 @@
 <?php
-include "header.php";
-include "db.php";
-include "common.php";
+include "layout.php";
 if(isset($_POST['register'])){
     $username = $_SESSION['login_user'];
+    $login_id = $_SESSION['login_id'];
     $access = $_POST['access'];
     $grade = $_POST['grade'];
     $firstname = $_POST['firstname'];
@@ -23,47 +22,30 @@ if(isset($_POST['register'])){
         die('Query FAILED' . mysqli_error($connection));   
         }
     }  
-if(isset($_SESSION['login_user'])){
-    $username = $_SESSION['login_user'];
-    $query = "SELECT * FROM users WHERE username = '$username'";
-    $result = mysqli_query($connection, $query);
-    $row = mysqli_fetch_assoc($result);
-    if($row['access']==1){
-        include "ovladaci_panel_ucitel.php";
-    }   else{
-        include "ovladaci_panel_student.php";
-    }
-}
-include "head.php"; 
 ?>
 
-<body> 
-<div class="container">
-<div class="col-sm-6">
-
-<h3>Registrace</h3> 
+<h3>Změna údajů</h3> 
 <form action="osobni_udaje.php" method="post">
-        <div class="form-group">
         <label for="firstname">Firstname</label>
-        <input type="text" name="firstname" class="form-control">
-        </div>
-        <div class="form-group">
+        <input type="text" name="firstname">
+
         <label for="surname">Surname</label>
-        <input type="text" name="surname" class="form-control">
-        </div>
-        <div class="form-group">
+        <input type="text" name="surname">
+
         <label for="Birthdate">Birthdate</label>
-        <input type="text" name="birthdate" class="form-control">
-        </div>
-        <div class="form-group">
+        <input type="text" name="birthdate">
+
         <select name="sex">
         <option value="muz">Muž</option>
         <option value="zena">Žena</option>
+
+        <br>
         </select>
         <select name="access">
-        <option value="1">Ucitel</option>
+        <option value="1">Učitel</option>
         <option value="2">Student</option>
         </select>
+        
         <select name="grade">
         <option value="1">První třída</option>
         <option value="2">Druhá třída</option>
@@ -77,12 +59,9 @@ include "head.php";
         </div>
         </select>
 
-        <input class ="btn btn-primary" type="submit" name="register" value="Submit">
+        <input type="submit" name="register" value="Submit">
         <br>
 
     </form>
 </form>
-</div>
-</div>
-</body>
-</html>
+<?php include "layout_end.php"?>

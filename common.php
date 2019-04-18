@@ -70,6 +70,7 @@ function showLogin() {
         $row = mysqli_fetch_array($result);
         $session2 = $_SESSION['login_id'] = $row[0]; 
         $session =  $_SESSION['login_user']= $username;
+        
         //echo $session;
         echo "<script>location.href='index.php'</script>";
     

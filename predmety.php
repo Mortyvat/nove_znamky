@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include "layout.php";
 $username = '';
 $username =  $_SESSION['login_user'];
 $connection = mysqli_connect('localhost', 'root', '', 'databaze');
@@ -17,9 +17,10 @@ die('Query FAILED' . mysqli_error($connection));
 <h2>Tvoje známky</h2>
 <?php
 while($row = mysqli_fetch_array($result)) {
+    echo"<div class='rightcolumn'><div class=card>";
     $id = $row['id'];
     $class = $row['class'];
-    echo $class. "<br>";
+    echo "<h2>".$class. "<br></h2>";
     $query2 = " SELECT users.username, classes.class, znamky.date, znamky.mark FROM `users`, znamky, classes WHERE username = 'robin' and znamky.id_student= users.id and znamky.id_class = classes.id and classes.id='$id'";
     $result2 = mysqli_query($connection, $query2);
     $numRow = mysqli_num_rows($result2);
@@ -31,6 +32,7 @@ while($row = mysqli_fetch_array($result)) {
         $totalgrade = 0;
         echo "<b>Tvoje známky:</b><br>";
         while($row2 = mysqli_fetch_array($result2)) {
+            
             echo $row2['date'] . ' známka ' . $row2['mark'] . '<br>';
 
             $grade = $row2['mark'];
@@ -42,10 +44,11 @@ while($row = mysqli_fetch_array($result)) {
     }else{
         echo "<b>Nemáte známky</b><br>";
     }
+    echo '</div></div>';
 }
 
 
-
+include "layout_end.php"
 ?>
 </div>
 

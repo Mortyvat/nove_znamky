@@ -1,4 +1,4 @@
-<div class="header">
+
 <?php
 
 
@@ -8,6 +8,7 @@
     $connection = mysqli_connect('localhost', 'root', '', 'databaze');
     $result = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($result)) {
+        echo"<div class='header'>";
         if($row['access']==1){
         echo "<h2 style='text-transform:uppercase;'>Vítejte Pane učiteli ".$_SESSION['login_user']."</h2> ";
         } elseif($row['access']==2){

@@ -5,8 +5,6 @@ include "head.php";
 ?>
 
 <body>
-<div id="main">
-  
         <?php
         include "prihlasovani.php";
         include "welcome.php";
@@ -33,7 +31,7 @@ include "head.php";
         include "moje_znamky.php";
         include "vypis_studentu_predmetu.php";
         ?> 
-        </div>
+        
 
 <script>
   function openSlideMenu(){

@@ -14,24 +14,24 @@ if(isset($_SESSION['login_user'])){
     </span>
 
     <ul class="navbar-nav">
-    <li><a href="index.php">Domů</a></li>
-            <li><a href="classes_to_teach.php">Učit předmět</a></li>
-            <li><a href="zapsat_aktualitu.php">Novinka</a></li>
-            <li><a href="pridat_znamky.php">Přidat Známky</a></li>
-            <li><a href="predmety_ucitel.php">Přehled Známek</a><li>
-            <li><a href="osobni_udaje.php">Osobní údaje</a></li>
-            <li><a href="odhlaseni.php">Odhlaseni</a></li>
+      <li><a href="index.php">Domů</a></li>
+      <li><a href="classes_to_get.php">Přihlásit předmět</a></li>
+      <li><a href="nastaveni.php">Změna hesla</a></li>
+      <li><a href="predmety.php">Známky</a></li>
+      <li><a href="zapsat_aktualitu.php">Novinka</a></li>
+      <li><a href="osobni_udaje.php">Osobní údaje</a></li>
+      <li><a href="odhlaseni.php">Odhlašení</a></li>
     </ul>
   </nav>
   <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
     <a href="index.php">Domů</a>
-    <a href="classes_to_teach.php">Učit předmět</a>
+    <a href="classes_to_get.php">Přihlásit předmět</a>
+    <a href="nastaveni.php">Změna hesla</a>
+    <a href="predmety.php">Známky</a>
     <a href="zapsat_aktualitu.php">Novinka</a>
-    <a href="pridat_znamky.php">Přidat Známky</a>
-    <a href="predmety_ucitel.php">Přehled Známek</a>
     <a href="osobni_udaje.php">Osobní údaje</a>
-    <a href="odhlaseni.php">Odhlaseni</a>
+    <a href="odhlaseni.php">Odhlášení</a> 
   </div>
 
             

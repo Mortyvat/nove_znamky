@@ -11,17 +11,17 @@ if(isset($_SESSION['login_user'])){
 <div class='container'>
 <h3>Prihlasovani</h3> 
 <form action="index.php" method="post">
+  <div>
   <label for="username">Username</label>
-  <input type="text" name="username">
-  <label for="password">Password</label>
-  <div class="pole">
-  <input type="password" name= "password">
-  </div>
   <br>
-  <input type="submit" name="login" value="Submit">
+  <input type="text" name="username">
+  </div>
+  <label for="password">Password</label>
+  <input type="password" name= "password"> 
+  <input class ="btn btn-primary" type="submit" name="login" value="Submit">
   <a href='registrace.php'>Registrace</a>
-</form>  
-  </div> 
+</form>
+  </div>
   <?php  
 }  
 ?>

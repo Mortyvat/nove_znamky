@@ -10,9 +10,9 @@
     while($row = mysqli_fetch_assoc($result)) {
         echo"<div class='header'>";
         if($row['access']==1){
-        echo "<h2 style='text-transform:uppercase;'>Vítejte Pane učiteli prdel ".$_SESSION['login_user']."</h2> ";
+        echo "<h2 style='text-transform:uppercase;'>Vítejte Pane učiteli záchod ".$_SESSION['login_user']."</h2> ";
         } elseif($row['access']==2){
-            echo "<h2 style='text-transform:uppercase;'>Vítejte studente prdel ". $row['grade'].". třídy " .$_SESSION['login_user'] ." </h2>";
+            echo "<h2 style='text-transform:uppercase;'>Vítejte studente záchod ". $row['grade'].". třídy " .$_SESSION['login_user'] ." </h2>";
         } else {
             echo "Vypadni, tady nemáš co dělat";
 

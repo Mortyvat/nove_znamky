@@ -1,10 +1,7 @@
 <?php 
 $username = '';
 $username =  $_SESSION['login_user'];
-$connection = mysqli_connect('localhost', 'root', '', 'databaze');
-if(!$connection) {
-    die("Database connection failed");
-} 
+include "db.php";
 $query = "SELECT users.username, classes.class, znamky.date, znamky.mark FROM `users`, znamky, classes WHERE username = '$username' and znamky.id_student= users.id and znamky.id_class = classes.id ";
 $result = mysqli_query($connection, $query);
 if(!$result){

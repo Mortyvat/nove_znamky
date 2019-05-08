@@ -1,7 +1,7 @@
 <?php
-include "header.php";
-include "db.php";
-include "head.php";
+require_once ("header.php");
+require_once ("db.php");
+require_once ("head.php");
 ?>
 
 <body>
@@ -13,23 +13,23 @@ include "head.php";
         $result = mysqli_query($connection, $query);
         $row = mysqli_fetch_assoc($result);
         if($row['access']==1){
-            include "ovladaci_panel_ucitel.php";
+            require_once ("ovladaci_panel_ucitel.php");
         }   else{
-            include "ovladaci_panel_student.php";
+            require_once ("ovladaci_panel_student.php");
         } 
         echo "<div class='row'>";
         
         echo "<div class='leftcolumn'>";
         
-        include "vypis_znamek_predmetu_studenta.php";
-        include "Vypsat_aktualitu.php";
+        require_once ("vypis_znamek_predmetu_studenta.php");
+        require_once "Vypsat_aktualitu.php";
          
         echo "</div>";
         echo "<div class='rightcolumn'>";
-        include "hledat_studenta.php";
-        include "rozvrh.php";
-        include "moje_znamky.php";
-        include "vypis_studentu_predmetu.php";
+        require_once ("hledat_studenta.php");
+        require_once ("rozvrh.php");
+        require_once ("moje_znamky.php");
+        require_once ("vypis_studentu_predmetu.php");
         ?> 
         
 

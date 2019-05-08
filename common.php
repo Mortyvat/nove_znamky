@@ -1,9 +1,9 @@
 <?php
 
-include 'db.php'; 
+require_once ('db.php'); 
 
 
-//Vypíše všechny uživatele
+//Vypise vsechny uzivatele
 function showUsers() {
     global $connection;
     $query = "SELECT * FROM users";
@@ -13,7 +13,7 @@ function showUsers() {
     }
 }
 
-//Vypíše všechny předměty
+//Vypise vsechny predmety
 function showClasses() {
     global $connection;
     $query = "SELECT * FROM classes";
@@ -23,7 +23,7 @@ function showClasses() {
     }
 }
 
-//Ukáže data uživatele podle username
+//Ukaze data uziivatele podle username
 function showUsersID() {
     global $connection;
     $username =  $_SESSION['login_user'];
@@ -36,7 +36,7 @@ function showUsersID() {
     $_SESSION['student_id'] = $row3[0];
 }
 
-//Ukáže ID studenta podle student
+//Ukaze ID studenta podle student
 function showStudentID() {
     global $connection;
     $query = "SELECT id FROM users WHERE username = '$student'";
@@ -46,7 +46,7 @@ function showStudentID() {
     }
 }
 
-//Ukáže ID třídy podle predmet
+//Ukaze tridy podle predmet
 function showClassID() {
     global $connection;
     $query = "SELECT id FROM classes WHERE class = '$predmet'";
@@ -56,7 +56,7 @@ function showClassID() {
     }
 }
 
-//Vybere jeden záznam z databáze k přihlašování
+//Vybere jeden zaznam z databaze k prihlasovani
 function showLogin() {
     global $connection;
     $username= $_POST['username'];
@@ -148,7 +148,7 @@ function showMarksOf() {
     global $connection;
     $query = "SELECT users.username, classes.class, znamky.date, znamky.mark FROM `users`, znamky, classes WHERE  znamky.id_student= users.id and znamky.id_class = classes.id and classes.class='$id_predmetu' ";
     $result = mysqli_query($connection, $query);
-    if(!$result){
+     if(!$result){
         die('Query FAILED' . mysqli_error());
     }
 }

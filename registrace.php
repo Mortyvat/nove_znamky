@@ -12,7 +12,7 @@ if(isset($_POST['register'])){
     $query2 = "SELECT * FROM users WHERE username ='$username' LIMIT 1";
     $result2 = mysqli_query($connection, $query2);
     if (mysqli_fetch_row($result2)) {
-        //$hlaska .= "Přihlašovací jméno existuje". '<br>';
+        //$hlaska .= "Prihlasovaci� jmeno existuje". '<br>';
     } else {
             $access = $_POST['access'];
             $grade = $_POST['grade'];

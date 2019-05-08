@@ -1,5 +1,5 @@
 <?php 
-include "layout.php";
+require_once ("layout.php");
 $username =  $_SESSION['login_user'];
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($connection, $query);
@@ -42,4 +42,4 @@ $username =  $_SESSION['login_user'];
     ?>
 </select>           
 <input type="submit" name="submit" value="Submit">   
-<?php include "layout_end.php"?>
+<?php require_once ("layout_end.php")?>

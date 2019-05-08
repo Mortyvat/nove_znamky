@@ -1,7 +1,7 @@
 
 <?php 
 
-function Pristup();
+Pristup();
 $username = '';
 $username =  $_SESSION['login_user'];
 echo $username;
